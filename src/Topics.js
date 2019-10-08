@@ -24,7 +24,7 @@ const Topics = ({ match }) => {
           <ul>
           {topics.map(item => (
             <li key={item.id}>
-              <Link to={`/topics/${item.id}`}>
+              <Link to={`${match.url}/:topicId`}>
                 {item.name}
               </Link>
             </li>

@@ -9,6 +9,7 @@ const Home = () => {
   );
 }
 
+
 const About = () => {
   return (
     <div>
@@ -17,40 +18,11 @@ const About = () => {
   );
 }
 
-const Projects = ({ match }) => {
-  console.log(match);
+const Projects = () => {
   return (
     <div>
       <h1>This is PROJECTS page</h1>
-
-      <ul>
-        <li><Link to={`${match.url}/project1`}>Project 1</Link></li>
-        <li><Link to={`${match.url}/project2`}>Project 2</Link></li>
-        <li><Link to={`${match.url}/project3`}>Project 3</Link></li>
-      </ul>
-      <Route path={`${match.path}/:name`}
-      render={({ match}) => (
-        <div>
-          {''}
-     
-          <h3> This is the first route {match.params.name} </h3>
-        </div>
-      )} />
-
-
-      <Route path={`${match.path}/:name`}
-      render={ (props) => <Project {...props}  /> }/>
-
     </div>
-  );
-}
-
-const Project = ({ match }) => {
-  return (
-      <div>
-          <h3>This is a second route, I am PROJECT page {match.params.name}</h3>
-      </div>
-
   );
 }
 
@@ -89,9 +61,8 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/projects" component={Projects} />
-
         </Switch>
-          
+             
       </Router>
     </div>
   );
