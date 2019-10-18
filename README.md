@@ -1,4 +1,4 @@
-# This project was made to master React-Route
+# This project was made to master React Router
 
 ## Used 
 create-react-app
